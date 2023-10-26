@@ -78,11 +78,12 @@
   });
 
   afterUpdate(() => {
-      fetchOpportunityChartData(startDate, endDate);
-      // Store the dates in local storage for future use
+    if (startDate !== previousStartDate || endDate !== previousEndDate) {
+    fetchOpportunityChartData(startDate, endDate);
+
       localStorage.setItem('startDate', startDate);
       localStorage.setItem('endDate', endDate);
-    
+    }
   });
 
   async function fetchOpportunityChartData(startDate, endDate) {

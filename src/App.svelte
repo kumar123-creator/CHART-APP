@@ -9,9 +9,8 @@
 
   <body>
    <Calendar/>
-  <MetricsCard {appData}/>
+
   <DealLifeCycleDays {appData}/>
-  <OppurtunityValue {appData}/>
-  <StateReasons {appData}/>
+ 
   </body>
   
