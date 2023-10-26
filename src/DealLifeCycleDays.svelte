@@ -2,25 +2,17 @@
   import { onMount, afterUpdate } from 'svelte';
   import { dateStore } from './DateStore.js'; // Import the store
   import { DateRangePicker } from '@syncfusion/ej2-calendars';
-  import {
-    Chart,
-    ColumnSeries,
-    LineSeries,
-    Category,
-    Legend,
-    Tooltip,
-    SplineSeries,
-    BarSeries,
-    DateTime
-  } from '@syncfusion/ej2-charts';
+  import { Chart, ColumnSeries, LineSeries, Category, Legend, Tooltip, SplineSeries, BarSeries, DateTime } from '@syncfusion/ej2-charts';
   import { Browser } from '@syncfusion/ej2-base';
   Chart.Inject(ColumnSeries, LineSeries, Category, Legend, Tooltip, SplineSeries, BarSeries, DateTime);
   import Card from './MetricsCard.svelte';
   import { format, parse, compareAsc } from 'date-fns';
 
+  export let appData;
+  
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
-  export let appData;
+
   let startDate = '';
   let endDate = '';
   let previousStartDate = '';
@@ -178,24 +170,12 @@
   }
 </script>
 
-
-
 <div class="chart-card">
   <h2>Deal Lifecycle Days</h2>
   <div id='chart-container-days'></div>
 </div>
-<style>
-  
-.center-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-top: 60px;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
 
+<style>
   .chart-card {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -205,46 +185,6 @@
     margin-top: 20px; /* Add margin to create space between the charts */
   }
 
-	main {
-	  display: flex;
-	  flex-wrap: wrap;
-	  justify-content: center;
-    margin-top: 100px;
-	}
-  
-  .card {
-    flex: 1;
-    max-width: 300px;
-    margin: 5px;
-  }
-
-  /* Tooltip container style */
-  .tooltip {
-    position: relative;
-    display: inline-block;
-  }
-
-  .tooltiptext {
-    visibility: hidden;
-    width: 200px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 4px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%; /* Position the tooltip above the card */
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
   h2 {
     font-weight: bold;
     font-size: large;

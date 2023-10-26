@@ -162,18 +162,12 @@
 
 </script>
 
+<div class="chart-card">
+  <h2>Opportunity Value by User</h2>
+  <div id='chart-container-opportunity'></div>
+</div> 
+
 <style>
-
-.center-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-top: 60px;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
   .chart-card {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -182,54 +176,9 @@
     margin: 0px; /* Add margin to create space between the charts */
     margin-top: 20px;
   }
-
-	main {
-	  display: flex;
-	  flex-wrap: wrap;
-	  justify-content: center;
-    margin-top: 100px;
-	}
-  
-  .card {
-    flex: 1;
-    max-width: 300px;
-    margin: 5px;
-  }
-
-  /* Tooltip container style */
-  .tooltip {
-    position: relative;
-    display: inline-block;
-  }
-
-  .tooltiptext {
-    visibility: hidden;
-    width: 200px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 4px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%; /* Position the tooltip above the card */
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
   h2 {
     font-weight: bold;
     font-size: large;
   }
 </style>
 
-<div class="chart-card">
-  <h2>Opportunity Value by User</h2>
-  <div id='chart-container-opportunity'></div>
-</div> 
