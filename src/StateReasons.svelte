@@ -13,6 +13,8 @@ const API_BASE_URL = 'https://api.recruitly.io/api/dashboard/sales';
 
   let startDate = '';
   let endDate = '';
+  let previousStartDate = '';
+  let previousEndDate = '';
 
   // Function to check if local storage has date information
   function getDatesFromLocalStorage() {
@@ -27,14 +29,25 @@ const API_BASE_URL = 'https://api.recruitly.io/api/dashboard/sales';
 
   // Subscribe to the dateStore
   dateStore.subscribe((value) => {
+    previousStartDate = startDate; // Store the previous start date
+    previousEndDate = endDate; // Store the previous end date
     startDate = value.startDate;
     endDate = value.endDate;
-    fetchOpportunityStateReasonsChartData(startDate, endDate); // Fetch data whenever the date changes
+   // Fetch data whenever the date changes
+       // Check if the dates have changed before making an API call
+       if (startDate !== previousStartDate || endDate !== previousEndDate) {
+        fetchOpportunityStateReasonsChartData(startDate, endDate); 
+      // Store the dates in local storage for future use
+      localStorage.setItem('startDate', startDate);
+      localStorage.setItem('endDate', endDate);
+    }
   });
+
+
 
   onMount(() => {
     getDatesFromLocalStorage(); // Try to get dates from local storage
-    fetchOpportunityStateReasonsChartData(startDate, endDate); // Fetch data on component mount
+   // Fetch data on component mount
   });
 
   afterUpdate(() => {
