@@ -105,34 +105,51 @@ async function fetchOpportunityStateReasonsChartData(startDate, endDate) {
 }
 </script>
 
-<div class="chart-card">
-  <h2>Opportunity State Reasons</h2>
-  <div id='chart-no-data'>No data found.</div>
-  <div id='chart-container-state-reasons'></div>
+
+<div class="card card-fluid">
+  <div class="card-header border-0">
+      Opportunity State Reasons
+  </div>
+  <div class="card-body">
+    <div id='chart-no-data'>No data found.</div>
+      <div id="chart-container-state-reasons"></div>
+  </div>
 </div>
 
+
 <style>
-    #chart-no-data {
+ .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(20,20,31,.12);
+    border-radius: 0.25rem;
+    margin: 40px;
+    margin-top:-20px;
+
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+.card-header {
+  font-size: 16px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust the font weight as needed */
+  padding: 15px; /* Adjust the padding as needed */
+ 
+}
+
+#chart-no-data {
     text-align: center;
     display: none;
     font-weight: bold;
     font-size: 16px;
     color: gray;
   }
-
-  h2 {
-    font-weight: bold;
-    font-size: large;
-    margin-left: 20px;
-    margin-top: 20px;
-  }
-  
-  .chart-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 0px; /* Add margin to create space between the charts */
-    margin-top: 20px;
-  }
 </style>
+

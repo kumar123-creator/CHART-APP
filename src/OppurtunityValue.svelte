@@ -131,7 +131,14 @@
               lineStyle: { width: 0 },
               labelFormat: '{value}',
               labelPlacement: 'OnTicks',
-              title: 'Opportunity value',
+              title: 'Opportunity Value',
+              titleStyle: {
+                    fontFamily: "'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif",
+                    fontWeight: 'Normal',
+                    color: '#767676;',
+                    size: '18px',
+                },
+
               labelStyle: {
                   size: '15px',
                   fontWeight: 'normal',
@@ -162,23 +169,43 @@
 
 </script>
 
-<div class="chart-card">
-  <h2>Opportunity Value by User</h2>
-  <div id='chart-container-opportunity'></div>
-</div> 
 
+<div class="card card-fluid">
+  <div class="card-header border-0">
+      Opportunity Value By User
+  </div>
+  <div class="card-body">
+      <div id="chart-container-opportunity"></div>
+  </div>
+</div>
 <style>
-  .chart-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 0px; /* Add margin to create space between the charts */
-    margin-top: 20px;
-  }
-  h2 {
-    font-weight: bold;
-    font-size: large;
-  }
-</style>
 
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(20,20,31,.12);
+  border-radius: 0.25rem;
+  margin: 40px;
+  margin-top:-20px;
+  
+
+}
+ .card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1rem;
+}
+.card-header {
+font-size: 16px; /* Adjust the font size as needed */
+font-weight: bold; /* Adjust the font weight as needed */
+
+
+padding: 15px; /* Adjust the padding as needed */
+
+}
+</style>

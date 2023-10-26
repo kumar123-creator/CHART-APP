@@ -46,9 +46,9 @@
     }
   
     .text-muted {
-      font-weight: 600;
+      font-weight: 700;
       font-style: normal;
-      line-height: 20px;
+      line-height: 22px;
       font-size: 12px;
       color: #6c798f !important;
     }
