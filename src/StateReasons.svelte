@@ -100,11 +100,10 @@ async function fetchOpportunityStateReasonsChartData(startDate, endDate) {
   h2 {
     font-weight: bold;
     font-size: large;
+    margin-left: 20px;
+    margin-top: 20px;
   }
-  .chart-card:last-child {
-    margin: 0;
-    padding: 0;
-  }
+  
 
   .center-container {
     display: flex;
@@ -121,7 +120,10 @@ async function fetchOpportunityStateReasonsChartData(startDate, endDate) {
     border-radius: 8px;
     padding: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0px; /* Add margin to create space between the charts */
+    margin-top: 20px;
   }
+
 
   main {
     display: flex;
@@ -164,7 +166,6 @@ async function fetchOpportunityStateReasonsChartData(startDate, endDate) {
     opacity: 1;
   }
 </style>
-
 <div class="chart-card">
   <h2>Opportunity State Reasons</h2>
   <div id='chart-container-state-reasons'></div>

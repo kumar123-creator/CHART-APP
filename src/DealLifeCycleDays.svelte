@@ -146,7 +146,7 @@
           yName: 'days',
           name: 'Avg Days to Deal',
           yAxisName: 'rightYAxis',
-          fill: 'Purple',
+          fill: 'Tomato',
           marker: {
             visible: true,
             height: 10,
@@ -201,7 +201,8 @@
     border-radius: 8px;
     padding: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px; /* Add margin to create space between the charts */
+    margin: 0px;
+    margin-top: 20px; /* Add margin to create space between the charts */
   }
 
 	main {

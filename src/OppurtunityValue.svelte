@@ -179,7 +179,8 @@
     border-radius: 8px;
     padding: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 10px; /* Add margin to create space between the charts */
+    margin: 0px; /* Add margin to create space between the charts */
+    margin-top: 20px;
   }
 
 	main {
